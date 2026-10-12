@@ -1,0 +1,356 @@
+{
+  "sample_rate": 48000,
+  "note": "time = sync point (s) on the 60 s timeline; the file starts at start = time - anchor; files are peak -1 dBFS, gain_db is the level used in sfx.wav",
+  "cues": [
+    {
+      "name": "hook_boom",
+      "time": 0.0,
+      "start": 0.0,
+      "anchor": 0.0,
+      "duration": 3.906,
+      "gain_db": -9.0,
+      "ref": "t=0 (hook start)",
+      "file": "sfx/hook_boom.wav"
+    },
+    {
+      "name": "hook_pop_1_always",
+      "time": 0.475,
+      "start": 0.475,
+      "anchor": 0.0,
+      "duration": 1.085,
+      "gain_db": -29.6,
+      "ref": "hook:'always'",
+      "file": "sfx/hook_pop_1_always.wav"
+    },
+    {
+      "name": "hook_pop_2_talk",
+      "time": 0.8,
+      "start": 0.8,
+      "anchor": 0.0,
+      "duration": 1.085,
+      "gain_db": -29.4,
+      "ref": "hook:'talk'",
+      "file": "sfx/hook_pop_2_talk.wav"
+    },
+    {
+      "name": "hook_pop_3_space",
+      "time": 1.263,
+      "start": 1.263,
+      "anchor": 0.0,
+      "duration": 1.078,
+      "gain_db": -29.0,
+      "ref": "hook:'space'",
+      "file": "sfx/hook_pop_3_space.wav"
+    },
+    {
+      "name": "hook_pop_4_somewhere",
+      "time": 2.013,
+      "start": 2.013,
+      "anchor": 0.0,
+      "duration": 1.085,
+      "gain_db": -29.3,
+      "ref": "hook:'somewhere'",
+      "file": "sfx/hook_pop_4_somewhere.wav"
+    },
+    {
+      "name": "hook_pop_5_else",
+      "time": 2.35,
+      "start": 2.35,
+      "anchor": 0.0,
+      "duration": 1.076,
+      "gain_db": -29.0,
+      "ref": "hook:'else?'",
+      "file": "sfx/hook_pop_5_else.wav"
+    },
+    {
+      "name": "echo_ping_1_out",
+      "time": 3.115,
+      "start": 3.115,
+      "anchor": 0.0,
+      "duration": 7.912,
+      "gain_db": -25.0,
+      "ref": "echo:'Out'",
+      "file": "sfx/echo_ping_1_out.wav"
+    },
+    {
+      "name": "echo_ping_2_up",
+      "time": 4.015,
+      "start": 4.015,
+      "anchor": 0.0,
+      "duration": 7.597,
+      "gain_db": -27.5,
+      "ref": "echo:'Up'",
+      "file": "sfx/echo_ping_2_up.wav"
+    },
+    {
+      "name": "echo_ping_3_far",
+      "time": 4.838,
+      "start": 4.838,
+      "anchor": 0.0,
+      "duration": 6.905,
+      "gain_db": -30.0,
+      "ref": "echo:'Far'",
+      "file": "sfx/echo_ping_3_far.wav"
+    },
+    {
+      "name": "loop_lockon",
+      "time": 8.525,
+      "start": 8.525,
+      "anchor": 0.0,
+      "duration": 1.015,
+      "gain_db": -27.0,
+      "ref": "loop:'you.'",
+      "file": "sfx/loop_lockon.wav"
+    },
+    {
+      "name": "truth_riser",
+      "time": 10.47,
+      "start": 9.27,
+      "anchor": 1.2,
+      "duration": 1.2,
+      "gain_db": -21.0,
+      "ref": "truth: 1.2 s ending on 'never'",
+      "file": "sfx/truth_riser.wav"
+    },
+    {
+      "name": "never_whoosh",
+      "time": 10.47,
+      "start": 10.35,
+      "anchor": 0.12,
+      "duration": 1.9,
+      "gain_db": -19.0,
+      "ref": "truth:'never' (zoom-out)",
+      "file": "sfx/never_whoosh.wav"
+    },
+    {
+      "name": "never_impact",
+      "time": 10.47,
+      "start": 10.47,
+      "anchor": 0.0,
+      "duration": 4.77,
+      "gain_db": -6.0,
+      "ref": "truth:'never'",
+      "file": "sfx/never_impact.wav"
+    },
+    {
+      "name": "distance_ruler_ticks",
+      "time": 15.25,
+      "start": 15.25,
+      "anchor": 0.0,
+      "duration": 1.647,
+      "gain_db": -31.0,
+      "ref": "distance:'Just'..'up.' (11 ticks, 0-100 km)",
+      "file": "sfx/distance_ruler_ticks.wav"
+    },
+    {
+      "name": "distance_car_whoosh",
+      "time": 17.355,
+      "start": 17.275,
+      "anchor": 0.08,
+      "duration": 0.8,
+      "gain_db": -27.0,
+      "ref": "distance:'car'",
+      "file": "sfx/distance_car_whoosh.wav"
+    },
+    {
+      "name": "distance_hour_chime",
+      "time": 19.955,
+      "start": 19.955,
+      "anchor": 0.0,
+      "duration": 4.882,
+      "gain_db": -27.0,
+      "ref": "distance:'hour.'",
+      "file": "sfx/distance_hour_chime.wav"
+    },
+    {
+      "name": "speed_racing_whoosh",
+      "time": 23.538,
+      "start": 23.238,
+      "anchor": 0.3,
+      "duration": 1.7,
+      "gain_db": -19.0,
+      "ref": "speed:'racing'",
+      "file": "sfx/speed_racing_whoosh.wav"
+    },
+    {
+      "name": "speed_counter_ticks",
+      "time": 23.538,
+      "start": 23.538,
+      "anchor": 0.0,
+      "duration": 3.635,
+      "gain_db": -34.0,
+      "ref": "speed:'racing'..'hour.' (accelerating)",
+      "file": "sfx/speed_counter_ticks.wav"
+    },
+    {
+      "name": "speed_counter_hit",
+      "time": 26.738,
+      "start": 26.738,
+      "anchor": 0.0,
+      "duration": 2.033,
+      "gain_db": -13.0,
+      "ref": "speed:'hour.'",
+      "file": "sfx/speed_counter_hit.wav"
+    },
+    {
+      "name": "stars_heartbeat",
+      "time": 28.183,
+      "start": 28.183,
+      "anchor": 0.0,
+      "duration": 2.949,
+      "gain_db": -8.0,
+      "ref": "stars:'blood?'",
+      "file": "sfx/stars_heartbeat.wav"
+    },
+    {
+      "name": "stars_reverse_swell",
+      "time": 29.035,
+      "start": 28.235,
+      "anchor": 0.8,
+      "duration": 0.8,
+      "gain_db": -19.0,
+      "ref": "stars: into 'Forged'",
+      "file": "sfx/stars_reverse_swell.wav"
+    },
+    {
+      "name": "stars_supernova_boom",
+      "time": 30.608,
+      "start": 30.608,
+      "anchor": 0.0,
+      "duration": 7.386,
+      "gain_db": -4.0,
+      "ref": "stars:'exploded'",
+      "file": "sfx/stars_supernova_boom.wav"
+    },
+    {
+      "name": "stars_supernova_debris",
+      "time": 30.648,
+      "start": 30.648,
+      "anchor": 0.0,
+      "duration": 6.014,
+      "gain_db": -21.0,
+      "ref": "stars:'exploded' (+40 ms)",
+      "file": "sfx/stars_supernova_debris.wav"
+    },
+    {
+      "name": "question_inhale",
+      "time": 33.108,
+      "start": 32.108,
+      "anchor": 1.0,
+      "duration": 1.0,
+      "gain_db": -17.0,
+      "ref": "question scene start (ends there)",
+      "file": "sfx/question_inhale.wav"
+    },
+    {
+      "name": "psych_glass_1",
+      "time": 37.657,
+      "start": 37.657,
+      "anchor": 0.0,
+      "duration": 5.177,
+      "gain_db": -31.0,
+      "ref": "psych:'distance.'",
+      "file": "sfx/psych_glass_1.wav"
+    },
+    {
+      "name": "psych_glass_2",
+      "time": 39.782,
+      "start": 39.782,
+      "anchor": 0.0,
+      "duration": 5.655,
+      "gain_db": -33.0,
+      "ref": "psych:'feels,'",
+      "file": "sfx/psych_glass_2.wav"
+    },
+    {
+      "name": "psych_glass_3",
+      "time": 42.498,
+      "start": 42.498,
+      "anchor": 0.0,
+      "duration": 5.811,
+      "gain_db": -34.0,
+      "ref": "psych:'Blurrier.'",
+      "file": "sfx/psych_glass_3.wav"
+    },
+    {
+      "name": "life_recede_1_dreams",
+      "time": 46.227,
+      "start": 46.197,
+      "anchor": 0.03,
+      "duration": 7.405,
+      "gain_db": -24.0,
+      "ref": "life:'dreams.'",
+      "file": "sfx/life_recede_1_dreams.wav"
+    },
+    {
+      "name": "life_recede_2_goals",
+      "time": 47.132,
+      "start": 47.102,
+      "anchor": 0.03,
+      "duration": 7.255,
+      "gain_db": -25.0,
+      "ref": "life:'goals.'",
+      "file": "sfx/life_recede_2_goals.wav"
+    },
+    {
+      "name": "life_recede_3_life",
+      "time": 47.992,
+      "start": 47.962,
+      "anchor": 0.03,
+      "duration": 7.371,
+      "gain_db": -25.5,
+      "ref": "life:'life'",
+      "file": "sfx/life_recede_3_life.wav"
+    },
+    {
+      "name": "life_someday_twinkle",
+      "time": 49.935,
+      "start": 49.935,
+      "anchor": 0.0,
+      "duration": 5.754,
+      "gain_db": -30.0,
+      "ref": "life:'someday.'",
+      "file": "sfx/life_someday_twinkle.wav"
+    },
+    {
+      "name": "payoff_reverse_cymbal",
+      "time": 51.038,
+      "start": 49.538,
+      "anchor": 1.5,
+      "duration": 1.5,
+      "gain_db": -22.0,
+      "ref": "payoff: into 'But'",
+      "file": "sfx/payoff_reverse_cymbal.wav"
+    },
+    {
+      "name": "payoff_warp_whoosh",
+      "time": 51.038,
+      "start": 51.038,
+      "anchor": 0.0,
+      "duration": 1.5,
+      "gain_db": -18.0,
+      "ref": "payoff:'But' (toward camera)",
+      "file": "sfx/payoff_warp_whoosh.wav"
+    },
+    {
+      "name": "payoff_already_impact",
+      "time": 52.575,
+      "start": 52.575,
+      "anchor": 0.0,
+      "duration": 4.888,
+      "gain_db": -7.0,
+      "ref": "payoff:'already'",
+      "file": "sfx/payoff_already_impact.wav"
+    },
+    {
+      "name": "final_living_shimmer",
+      "time": 55.975,
+      "start": 55.975,
+      "anchor": 0.0,
+      "duration": 8.029,
+      "gain_db": -27.0,
+      "ref": "final:'living'",
+      "file": "sfx/final_living_shimmer.wav"
+    }
+  ]
+}

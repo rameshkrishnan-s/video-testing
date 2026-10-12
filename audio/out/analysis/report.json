@@ -1,0 +1,254 @@
+{
+  "master": {
+    "integrated_LUFS": -14.09,
+    "true_peak_dBTP": -1.72,
+    "sample_peak_dBFS": -1.79,
+    "LRA_LU": 2.01,
+    "samples": 2880000,
+    "duration_s": 60.0,
+    "dc_offset": [
+      -0.000456,
+      -0.000469
+    ],
+    "correlation": 0.952,
+    "mono_minus_stereo_LU": -0.01,
+    "side_to_mid_dB": -16.12
+  },
+  "speech_regions": {
+    "vo_LUFS": -11.89,
+    "music_ducked_LUFS": -25.89,
+    "vo_minus_music_LU": 14.0,
+    "sfx_LUFS": -25.28
+  },
+  "sections_master": [
+    {
+      "scene": "night-sky",
+      "t0": 0.0,
+      "t1": 9.102,
+      "max_short_term_LUFS": -13.6,
+      "median_short_term_LUFS": -14.4
+    },
+    {
+      "scene": "pull-back",
+      "t0": 9.102,
+      "t1": 13.18,
+      "max_short_term_LUFS": -13.3,
+      "median_short_term_LUFS": -14.8
+    },
+    {
+      "scene": "karman",
+      "t0": 13.18,
+      "t1": 20.538,
+      "max_short_term_LUFS": -12.9,
+      "median_short_term_LUFS": -14.1
+    },
+    {
+      "scene": "orbit",
+      "t0": 20.538,
+      "t1": 27.295,
+      "max_short_term_LUFS": -12.7,
+      "median_short_term_LUFS": -13.8
+    },
+    {
+      "scene": "star-stuff",
+      "t0": 27.295,
+      "t1": 33.108,
+      "max_short_term_LUFS": -12.7,
+      "median_short_term_LUFS": -13.8
+    },
+    {
+      "scene": "question",
+      "t0": 33.108,
+      "t1": 35.335,
+      "max_short_term_LUFS": -14.2,
+      "median_short_term_LUFS": -15.3
+    },
+    {
+      "scene": "psych",
+      "t0": 35.335,
+      "t1": 44.368,
+      "max_short_term_LUFS": -12.6,
+      "median_short_term_LUFS": -14.2
+    },
+    {
+      "scene": "someday",
+      "t0": 44.368,
+      "t1": 50.788,
+      "max_short_term_LUFS": -13.5,
+      "median_short_term_LUFS": -14.5
+    },
+    {
+      "scene": "already",
+      "t0": 50.788,
+      "t1": 60.0,
+      "max_short_term_LUFS": -13.2,
+      "median_short_term_LUFS": -15.2
+    }
+  ],
+  "sections_music_ducked": [
+    {
+      "scene": "night-sky",
+      "max_short_term_LUFS": -24.6,
+      "median_short_term_LUFS": -25.1
+    },
+    {
+      "scene": "pull-back",
+      "max_short_term_LUFS": -24.3,
+      "median_short_term_LUFS": -25.5
+    },
+    {
+      "scene": "karman",
+      "max_short_term_LUFS": -25.0,
+      "median_short_term_LUFS": -25.9
+    },
+    {
+      "scene": "orbit",
+      "max_short_term_LUFS": -23.2,
+      "median_short_term_LUFS": -24.3
+    },
+    {
+      "scene": "star-stuff",
+      "max_short_term_LUFS": -22.9,
+      "median_short_term_LUFS": -24.9
+    },
+    {
+      "scene": "question",
+      "max_short_term_LUFS": -36.9,
+      "median_short_term_LUFS": -39.0
+    },
+    {
+      "scene": "psych",
+      "max_short_term_LUFS": -29.6,
+      "median_short_term_LUFS": -32.2
+    },
+    {
+      "scene": "someday",
+      "max_short_term_LUFS": -27.3,
+      "median_short_term_LUFS": -28.4
+    },
+    {
+      "scene": "already",
+      "max_short_term_LUFS": -19.4,
+      "median_short_term_LUFS": -22.7
+    }
+  ],
+  "word_masking_1_4kHz": {
+    "min_dB": 2.7,
+    "median_dB": 17.5,
+    "worst": [
+      {
+        "beat": "truth",
+        "word": "you've",
+        "t": 10.29,
+        "dB": 2.7
+      },
+      {
+        "beat": "speed",
+        "word": "the",
+        "t": 24.2,
+        "dB": 2.9
+      },
+      {
+        "beat": "speed",
+        "word": "an",
+        "t": 26.65,
+        "dB": 3.2
+      },
+      {
+        "beat": "stars",
+        "word": "even",
+        "t": 31.84,
+        "dB": 4.5
+      },
+      {
+        "beat": "stars",
+        "word": "existed.",
+        "t": 32.13,
+        "dB": 5.8
+      },
+      {
+        "beat": "final",
+        "word": "you",
+        "t": 54.17,
+        "dB": 6.6
+      },
+      {
+        "beat": "distance",
+        "word": "you'd",
+        "t": 18.93,
+        "dB": 6.7
+      },
+      {
+        "beat": "stars",
+        "word": "exploded",
+        "t": 30.61,
+        "dB": 6.8
+      }
+    ]
+  },
+  "loop_seam": {
+    "first_sample": [
+      0.0,
+      0.0
+    ],
+    "last_sample": [
+      -1e-05,
+      -1.3e-05
+    ],
+    "jump": 1.29e-05,
+    "median_step": 0.00683,
+    "p99.9_step": 0.324
+  },
+  "clicks_music": [
+    0.0
+  ],
+  "clicks_sfx": [
+    1.263,
+    2.013,
+    2.35,
+    15.25,
+    15.366,
+    15.481,
+    15.596,
+    15.712,
+    15.827,
+    15.943,
+    16.059,
+    16.174,
+    16.289,
+    16.405,
+    24.491,
+    24.583,
+    24.67,
+    24.754,
+    24.834,
+    24.911,
+    24.986,
+    25.057,
+    25.126,
+    25.192,
+    25.257,
+    25.319,
+    25.38,
+    25.438,
+    25.495,
+    25.55,
+    25.603,
+    25.656,
+    30.815,
+    30.94,
+    31.554,
+    31.631,
+    31.869
+  ],
+  "mix_settings": {
+    "duck_db": 6.0,
+    "duck_attack_ms": 60.0,
+    "duck_release_ms": 350.0,
+    "duck_lookahead_ms": 25.0,
+    "sfx_duck_db": 2.0,
+    "music_bus_gain_db": -0.12,
+    "master_gain_db": -0.2,
+    "limiter_ceiling_dBTP": -1.3
+  }
+}

@@ -4,7 +4,9 @@
  *
  * Environment notes:
  * - Chromium is pre-installed; Remotion must not download its own browser.
- * - No GPU: WebGL runs on SwiftShader via ANGLE ("swangle").
+ * - No GPU: WebGL runs on SwiftShader through ANGLE. "angle" measured ~2x faster than
+ *   "swangle" for DOM compositing (375 vs 780 ms/frame) and ~15% faster for WebGL;
+ *   "swiftshader" is equivalent to "angle".
  */
 import { Config } from "@remotion/cli/config";
 
@@ -12,7 +14,7 @@ Config.setRspack(true);
 Config.setBrowserExecutable(
   "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell",
 );
-Config.setChromiumOpenGlRenderer("swangle");
+Config.setChromiumOpenGlRenderer("angle");
 Config.setVideoImageFormat("jpeg");
 Config.setJpegQuality(95);
 Config.setOverwriteOutput(true);

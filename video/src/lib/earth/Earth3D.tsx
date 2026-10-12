@@ -65,8 +65,16 @@ export type Earth3DProps = EarthOrientation & {
   detail?: number;
   /** HTML pins projected onto the globe. */
   pins?: EarthPinSpec[];
-  /** Antialiasing (MSAA). Default true. */
+  /**
+   * MSAA. Default false: the silhouette is antialiased analytically in the shader, and MSAA
+   * nearly doubles the software-WebGL cost (~1.8 s vs ~1.0 s per full-screen frame).
+   */
   antialias?: boolean;
+  /**
+   * Render-resolution scale of the WebGL canvas (default 1). E.g. 0.75 renders 56% of the
+   * pixels and upscales with CSS — fine during fast moves / motion blur, softer at rest.
+   */
+  resolution?: number;
   style?: React.CSSProperties;
   /** Extra R3F content in the same world (Earth radius 1 at origin). */
   children?: React.ReactNode;
@@ -105,7 +113,7 @@ const EarthScene: React.FC<SceneProps> = (p) => {
     () => ({
       surface: new THREE.SphereGeometry(1, 320, 160),
       clouds: new THREE.SphereGeometry(1.0045, 256, 128),
-      atmo: new THREE.SphereGeometry(1.35, 96, 48),
+      atmo: new THREE.SphereGeometry(1.25, 96, 48),
     }),
     [],
   );
@@ -114,6 +122,15 @@ const EarthScene: React.FC<SceneProps> = (p) => {
     const surface = new THREE.ShaderMaterial({
       vertexShader: surfaceVertex,
       fragmentShader: surfaceFragment,
+      // premultiplied output with analytic edge alpha (smooth silhouette without MSAA)
+      transparent: true,
+      premultipliedAlpha: true,
+      blending: THREE.CustomBlending,
+      blendEquation: THREE.AddEquation,
+      blendSrc: THREE.OneFactor,
+      blendDst: THREE.OneMinusSrcAlphaFactor,
+      blendSrcAlpha: THREE.OneFactor,
+      blendDstAlpha: THREE.OneMinusSrcAlphaFactor,
       uniforms: {
         uDay: { value: p.tex.day },
         uNight: { value: p.tex.night },
@@ -281,6 +298,9 @@ export const Earth3D: React.FC<Earth3DProps> = (props) => {
   const width = props.width ?? vw;
   const height = props.height ?? vh;
   const tex = useEarthTextures();
+  const res = Math.min(1, Math.max(0.25, props.resolution ?? 1));
+  const cw = Math.round(width * res);
+  const ch = Math.round(height * res);
   const camera = props.camera ?? fullPlanetCamera({ width, height });
   const orientation: EarthOrientation = {
     facingLon: props.facingLon ?? 0,
@@ -301,20 +321,26 @@ export const Earth3D: React.FC<Earth3DProps> = (props) => {
     >
       {tex ? (
         <ThreeCanvas
-          width={width}
-          height={height}
+          width={cw}
+          height={ch}
           gl={{
-            antialias: props.antialias ?? true,
+            antialias: props.antialias ?? false,
             alpha: true,
             premultipliedAlpha: true,
             preserveDrawingBuffer: true,
           }}
-          style={{ position: "absolute", left: 0, top: 0 }}
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            transformOrigin: "0 0",
+            transform: res !== 1 ? `scale(${width / cw}, ${height / ch})` : undefined,
+          }}
         >
           <EarthScene
             tex={tex}
-            width={width}
-            height={height}
+            width={cw}
+            height={ch}
             facingLon={orientation.facingLon!}
             facingLat={orientation.facingLat!}
             tilt={orientation.tilt!}

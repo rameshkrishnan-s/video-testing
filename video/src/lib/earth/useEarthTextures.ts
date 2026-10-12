@@ -20,7 +20,7 @@ const load = (url: string, srgb: boolean): Promise<THREE.Texture> =>
         t.colorSpace = srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace;
         t.wrapS = THREE.RepeatWrapping;
         t.wrapT = THREE.ClampToEdgeWrapping;
-        t.anisotropy = 8;
+        t.anisotropy = 1;
         t.generateMipmaps = true;
         t.minFilter = THREE.LinearMipmapLinearFilter;
         t.magFilter = THREE.LinearFilter;

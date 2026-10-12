@@ -31,9 +31,9 @@ import "../lib/fonts";
 
 export const EARTH_TEST_FRAMES = 360;
 
-export type EarthTestProps = { aa?: boolean; clouds?: boolean; atmo?: boolean; sky?: boolean };
+export type EarthTestProps = { aa?: boolean; clouds?: boolean; atmo?: boolean; sky?: boolean; tiny?: boolean; res?: number };
 
-export const EarthTest: React.FC<EarthTestProps> = ({ aa = true, clouds = true, atmo = true, sky = true }) => {
+export const EarthTest: React.FC<EarthTestProps> = ({ aa = false, clouds = true, atmo = true, sky = true, tiny = false, res = 1 }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const section = Math.min(3, Math.floor(frame / 90));
@@ -48,7 +48,7 @@ export const EarthTest: React.FC<EarthTestProps> = ({ aa = true, clouds = true, 
   let skyPan: [number, number] = [0, 0];
 
   if (section === 0) {
-    camera = fullPlanetCamera({ fill: 0.86, width, height, offsetY: -40 });
+    camera = fullPlanetCamera({ fill: tiny ? 0.05 : 0.86, width, height, offsetY: -40 });
     facingLon = -75 + f * 0.08;
     facingLat = 22;
     pins = [
@@ -60,10 +60,11 @@ export const EarthTest: React.FC<EarthTestProps> = ({ aa = true, clouds = true, 
       },
     ];
   } else if (section === 1) {
-    camera = limbCamera({ altitude: 0.16, horizonY: 0.6, fov: 42 });
-    facingLon = -160 + f * 0.03;
-    facingLat = 5;
-    sun = directionFromAngles(-70, 30);
+    camera = limbCamera({ altitude: 0.12, horizonY: 0.6, fov: 44 });
+    facingLon = -38 + f * 0.03;
+    facingLat = 22;
+    // low, slightly back-lighting sun: long light across clouds, glowing limb
+    sun = [-0.45, 0.82, 0.2];
     skyPan = [0, -200];
   } else if (section === 2) {
     const t = interpolate(f, [0, 75], [0, 1], { ...CLAMP, easing: EASE.inOut });
@@ -111,6 +112,7 @@ export const EarthTest: React.FC<EarthTestProps> = ({ aa = true, clouds = true, 
         facingLat={facingLat}
         cloudDrift={frame * 0.02}
         antialias={aa}
+        resolution={res}
         cloudOpacity={clouds ? 1 : 0}
         atmosphere={atmo ? 1 : 0}
         halo={atmo ? 1 : 0}

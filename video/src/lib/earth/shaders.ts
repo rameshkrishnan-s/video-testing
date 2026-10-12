@@ -121,11 +121,11 @@ void main() {
 
   // --- bump from elevation (R channel), in texture space
   vec2 tx = vec2(1.0 / 4096.0, 1.0 / 2048.0);
-  float hL = texture2D(uBrc, vUv - vec2(tx.x, 0.0)).r;
+  vec4 brc = texture2D(uBrc, vUv);
+  float h0 = brc.r;
   float hR = texture2D(uBrc, vUv + vec2(tx.x, 0.0)).r;
-  float hD = texture2D(uBrc, vUv - vec2(0.0, tx.y)).r;
   float hU = texture2D(uBrc, vUv + vec2(0.0, tx.y)).r;
-  vec2 grad = vec2((hR - hL) / (2.0 * tx.x * 6.2831853 * cosLat), (hU - hD) / (2.0 * tx.y * 3.1415927));
+  vec2 grad = vec2((hR - h0) / (tx.x * 6.2831853 * cosLat), (hU - h0) / (tx.y * 3.1415927));
   vec3 nB = normalize(nL - uBump * 0.010 * (grad.x * east + grad.y * north));
 
   vec3 Ng = normalize(uRot * nL);
@@ -137,9 +137,8 @@ void main() {
 
   // --- albedo grading
   vec3 day = texture2D(uDay, vUv).rgb;
-  vec4 brc = texture2D(uBrc, vUv);
   float ocean = 1.0 - smoothstep(0.25, 0.6, brc.g);
-  day = mix(day, day * vec3(0.34, 0.40, 0.44), ocean);           // deep navy ocean
+  day = mix(day, day * vec3(0.30, 0.36, 0.40), ocean);           // deep navy ocean
   float lum = dot(day, vec3(0.2126, 0.7152, 0.0722));
   day = mix(vec3(lum), day, mix(0.88, 1.0, ocean));               // calmer land greens
   if (uDetail > 0.0) {
@@ -170,16 +169,18 @@ void main() {
   col += sunCol * glint * (0.35 + 0.65 * fres) * ocean * shadow * (1.0 - 0.85 * cHere) * smoothstep(0.0, 0.12, NdotLg) * uSpec;
 
   // --- night side: city lights (sparkly up close) + faint moonlit ground
-  vec3 night = texture2D(uNight, vUv).rgb;
-  float nightMask = 1.0 - smoothstep(-0.10, 0.06, NdotLg);
-  float nl = max(max(night.r, night.g), night.b);
-  vec3 lights = night * smoothstep(0.010, 0.09, nl);
-  if (uDetail > 0.0) {
-    float sp = smoothstep(0.55, 0.85, vnoise(nL * 2600.0)) * 2.2 + smoothstep(0.5, 0.9, vnoise(nL * 900.0 + 7.0)) * 0.6;
-    lights *= mix(1.0, sp, uDetail);
+  float nightMask = (1.0 - smoothstep(-0.10, 0.06, NdotLg)) * uNightK;
+  if (nightMask > 0.0) {
+    vec3 night = texture2D(uNight, vUv).rgb;
+    float nl = max(max(night.r, night.g), night.b);
+    vec3 lights = night * smoothstep(0.010, 0.09, nl);
+    if (uDetail > 0.0) {
+      float sp = smoothstep(0.55, 0.85, vnoise(nL * 2600.0)) * 2.2 + smoothstep(0.5, 0.9, vnoise(nL * 900.0 + 7.0)) * 0.6;
+      lights *= mix(1.0, sp, uDetail);
+    }
+    vec3 cityCol = lights * vec3(1.25, 0.86, 0.52) * 5.0;
+    col += (cityCol * (1.0 - 0.75 * cHere) + night * 0.16) * nightMask;
   }
-  vec3 cityCol = lights * vec3(1.25, 0.86, 0.52) * 5.0;
-  col += (cityCol * (1.0 - 0.75 * cHere) + night * 0.16) * nightMask * uNightK;
 
   // --- atmosphere between camera and surface (linear light): extinction + in-scatter
   vec3 rd = -V;
@@ -187,12 +188,15 @@ void main() {
   float b = min(length(cameraPosition + rd * tc), 0.99999);
   float tau = opticalDepth(b, tc, uH);
   col *= exp(-tau * vec3(0.16, 0.42, 1.0) * 1.1);
-  col += scatter(tau, NdotLg, dot(rd, L)) * uAtmo * 1.05;
+  col += scatter(tau, NdotLg, dot(rd, L)) * uAtmo * 0.6;
 
   col = acesFilm(col * uExposure);
   col = toSRGB(col);
   col += (hash12(gl_FragCoord.xy + uSeed) - 0.5) / 255.0;
-  gl_FragColor = vec4(col, 1.0);
+  // analytic silhouette antialiasing (canvas is premultiplied alpha)
+  float bRaw = length(cameraPosition + rd * tc);
+  float edge = clamp((1.0 - bRaw) / max(fwidth(bRaw), 1e-6), 0.0, 1.0);
+  gl_FragColor = vec4(col * edge, edge);
 }
 `;
 
@@ -215,10 +219,11 @@ ${COMMON}
 void main() {
   vec2 cUv = vUv + vec2(uCloudU, 0.0);
   float c = cloudMask(texture2D(uBrc, cUv).b);
+  if (c * uOpacity < 0.004) discard;
   // cheap relief: brighter tops, darker thin edges
   vec2 tx = vec2(1.0 / 4096.0, 1.0 / 2048.0) * 2.0;
-  float cx = cloudMask(texture2D(uBrc, cUv + vec2(tx.x, 0.0)).b) - cloudMask(texture2D(uBrc, cUv - vec2(tx.x, 0.0)).b);
-  float cy = cloudMask(texture2D(uBrc, cUv + vec2(0.0, tx.y)).b) - cloudMask(texture2D(uBrc, cUv - vec2(0.0, tx.y)).b);
+  float cx = (cloudMask(texture2D(uBrc, cUv + vec2(tx.x, 0.0)).b) - c) * 2.0;
+  float cy = (cloudMask(texture2D(uBrc, cUv + vec2(0.0, tx.y)).b) - c) * 2.0;
 
   vec3 nL = normalize(vLocal);
   if (uDetail > 0.0) {
@@ -251,7 +256,7 @@ void main() {
   float b = min(length(cameraPosition + rd * tc), 0.99999);
   float tau = opticalDepth(b, tc, uH) * 0.85;
   col *= exp(-tau * vec3(0.16, 0.42, 1.0) * 1.1);
-  col += scatter(tau, NdotLg, dot(rd, uSun)) * uAtmo;
+  col += scatter(tau, NdotLg, dot(rd, uSun)) * uAtmo * 0.6;
 
   col = acesFilm(col * uExposure);
   col = toSRGB(col);
@@ -292,8 +297,12 @@ void main() {
   vec3 rd = normalize(vWorld - ro);
   float tc = -dot(ro, rd);                 // param of closest approach
   vec3 pc = ro + rd * tc;
-  float b = length(pc);
-  if (b < 1.0) discard;                    // over the disk: handled by the surface shader
+  float bRaw = length(pc);
+  float fw = fwidth(bRaw);
+  // over the disk: handled by the surface shader — except a 2px skirt under the
+  // antialiased silhouette, so no dark seam appears between planet and glow
+  if (bRaw < 1.0 - 2.0 * fw) discard;
+  float b = max(bRaw, 1.0);
 
   vec3 p = tc < 0.0 ? ro : pc;             // lighting at closest approach
   float muS = dot(normalize(p), uSun);
