@@ -21,17 +21,17 @@ changes back to the orchestrator.
 | 2 | `echo`     | Out there. Up there. Far away. |
 | 3 | `loop`     | The answer isn't really about space. It's about you. |
 | 4 | `truth`    | Here's the truth: you've never left space. Not for a single second. |
-| 5 | `distance` | It starts just a hundred kilometers up. If your car could drive straight up, you'd be there in about an hour. |
+| 5 | `distance` | The so-called edge of space? Just a hundred kilometers up. If your car could drive straight up, you'd be there in about an hour. |
 | 6 | `speed`    | And right now, sitting perfectly still, you're racing around the Sun at over a hundred thousand kilometers an hour. |
 | 7 | `stars`    | The iron in your blood? Forged inside stars that exploded before Earth even existed. |
 | 8 | `question` | So why does it feel so far away? |
-| 9 | `psych`    | Psychologists call it psychological distance. The farther away something feels, the more abstract your brain makes it. Less real. Less yours. |
+| 9 | `psych`    | Psychologists call it psychological distance. The farther away something feels, the more abstractly we think about it. Blurrier. Less yours. |
 | 10 | `life`    | And we do it with everything. Our dreams. Our goals. The life we keep saying will start... someday. |
 | 11 | `payoff`  | But you don't go to space. You're already in it. |
 | 12 | `final`   | And the life you keep waiting for? You're already living it. |
 
 Facts behind the claims (for on-screen labels):
-- Kármán line: conventional edge of space, **100 km** altitude. 100 km at 100 km/h = 1 hour.
+- Kármán line: conventional (FAI) edge of space, **100 km** altitude; the atmosphere has no sharp edge, which is why "so-called" edge. 100 km at 100 km/h = 1 hour.
 - Earth's mean orbital speed: **29.8 km/s ≈ 107,000 km/h**.
 - Iron (Fe, atomic number 26) is made in stars and spread by supernovae; the Solar System
   formed ~4.6 billion years ago from that enriched gas.
@@ -135,19 +135,19 @@ slowly, sun-lit, with an amber pin "YOU ARE HERE" on the visible hemisphere. Big
 
 **karman (distance)** — Close-up of Earth's curved limb across the lower-middle of the frame with
 the thin glowing blue atmosphere band. A vertical altitude ruler rises from the surface with ticks
-0-100 km; a dashed amber line at 100 km labelled `KÁRMÁN LINE · SPACE STARTS HERE`; big counter
+0-100 km; a dashed amber line at 100 km labelled `KÁRMÁN LINE · EDGE OF SPACE (BY CONVENTION)`; big counter
 `100 KM`. On "If your car could drive straight up": a small car icon drives up the ruler while a
 HUD readout shows `100 KM/H` → `≈ 1 HOUR`.
 
-**orbit (speed)** — "sitting perfectly still": calm frame, readout `YOUR SPEED: 0 KM/H` (feels still).
+**orbit (speed)** — "sitting perfectly still": calm frame, readout `VS. THE GROUND: 0 KM/H` (feels still).
 Then the camera pulls out to a top-down solar view: glowing Sun, thin orbit ellipse, Earth racing
-along it with a motion trail, background stars streaking. Counter ramps to `107,000 KM/H` (amber)
+along it with a motion trail, background stars streaking. Readout label switches to `VS. THE SUN:` and the counter ramps to `107,000 KM/H` (amber)
 with sub-line `≈ 30 KM EVERY SECOND`.
 
 **star-stuff (stars)** — Macro of a red blood drop/cell glow; a periodic-table tile `26 · Fe · IRON`
 emerges. Hard cut on "Forged inside stars": a star collapses and **explodes** (flash, shockwave ring,
 debris particles, colorful nebula), debris streams toward camera. Label `SUPERNOVA · BEFORE EARTH
-EXISTED (> 4.6 BILLION YEARS AGO)`.
+EXISTED (> 4.5 BILLION YEARS AGO)`.
 
 **question (question)** — Pattern interrupt. Music drops out. Near-black frame with sparse stars.
 Kinetic type center: `SO WHY DOES IT / FEEL SO / FAR AWAY?` word by word; `FAR AWAY?` in amber
@@ -157,7 +157,7 @@ and visibly *recedes* (scales down, blurs slightly) as it lands.
 `Construal Level Theory · Trope & Liberman`. A `YOU` dot near the bottom of the hero area with a
 perspective depth grid receding to a vanishing point above. Objects placed at increasing distance:
 near = sharp, colorful, detailed; far = blurred, desaturated, reduced to outline, then a dot.
-Axis labels `HERE → THERE` and `NOW → SOMEDAY`. On "Less real. Less yours." the far object fades to a dot.
+Axis labels `HERE → THERE` and `NOW → SOMEDAY`. On "Blurrier. Less yours." the far object fades to a dot.
 
 **someday (life)** — Words `DREAMS`, `GOALS`, `THE LIFE YOU WANT` (on their spoken words) are
 flung up and away into a starry sky, shrinking/blurring until they become stars. `SOMEDAY` hangs
