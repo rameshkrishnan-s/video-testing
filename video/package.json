@@ -1,0 +1,44 @@
+{
+  "name": "video",
+  "version": "1.0.0",
+  "description": "You've Never Left Space \u2014 60s vertical short (Remotion)",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@react-three/fiber": "9.8.1",
+    "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "@remotion/motion-blur": "4.0.535",
+    "@remotion/noise": "4.0.535",
+    "@remotion/paths": "4.0.535",
+    "@remotion/shapes": "4.0.535",
+    "@remotion/three": "4.0.535",
+    "@remotion/transitions": "4.0.535",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.535",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.535",
+    "@types/react": "19.2.7",
+    "@types/three": "0.186.0",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src && tsc --noEmit",
+    "render": "remotion render Main out/main.mp4 --codec=h264 --crf=16 --pixel-format=yuv420p --audio-codec=aac",
+    "render:scene": "remotion render",
+    "still": "remotion still",
+    "stills:main": "remotion render Main out/stills/main --sequence --image-format=png --frames=0,300,600,900,1200,1500,1799",
+    "earth:test": "remotion render EarthTest out/stills/earth --sequence --image-format=png --frames=30,120,200,250,300",
+    "upgrade": "remotion upgrade"
+  }
+}

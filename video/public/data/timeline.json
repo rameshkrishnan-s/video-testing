@@ -1,0 +1,905 @@
+{
+  "fps": 30,
+  "durationInFrames": 1800,
+  "voStart": 0.08,
+  "voEnd": 57.0,
+  "placeholder": true,
+  "beats": [
+    {
+      "id": "hook",
+      "text": "Why do we always talk about space like it's somewhere else?",
+      "start": 0.08,
+      "end": 3.473,
+      "words": [
+        {
+          "text": "Why",
+          "start": 0.08,
+          "end": 0.329
+        },
+        {
+          "text": "do",
+          "start": 0.348,
+          "end": 0.566
+        },
+        {
+          "text": "we",
+          "start": 0.584,
+          "end": 0.802
+        },
+        {
+          "text": "always",
+          "start": 0.821,
+          "end": 1.163
+        },
+        {
+          "text": "talk",
+          "start": 1.182,
+          "end": 1.462
+        },
+        {
+          "text": "about",
+          "start": 1.481,
+          "end": 1.792
+        },
+        {
+          "text": "space",
+          "start": 1.811,
+          "end": 2.122
+        },
+        {
+          "text": "like",
+          "start": 2.141,
+          "end": 2.421
+        },
+        {
+          "text": "it's",
+          "start": 2.44,
+          "end": 2.72
+        },
+        {
+          "text": "somewhere",
+          "start": 2.739,
+          "end": 3.174
+        },
+        {
+          "text": "else?",
+          "start": 3.193,
+          "end": 3.473
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "text": "Out there. Up there. Far away.",
+      "start": 3.753,
+      "end": 5.827,
+      "words": [
+        {
+          "text": "Out",
+          "start": 3.753,
+          "end": 4.003
+        },
+        {
+          "text": "there.",
+          "start": 4.021,
+          "end": 4.333
+        },
+        {
+          "text": "Up",
+          "start": 4.532,
+          "end": 4.75
+        },
+        {
+          "text": "there.",
+          "start": 4.768,
+          "end": 5.08
+        },
+        {
+          "text": "Far",
+          "start": 5.279,
+          "end": 5.528
+        },
+        {
+          "text": "away.",
+          "start": 5.547,
+          "end": 5.827
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "text": "The answer isn't really about space. It's about you.",
+      "start": 6.107,
+      "end": 9.145,
+      "words": [
+        {
+          "text": "The",
+          "start": 6.107,
+          "end": 6.356
+        },
+        {
+          "text": "answer",
+          "start": 6.375,
+          "end": 6.717
+        },
+        {
+          "text": "isn't",
+          "start": 6.736,
+          "end": 7.047
+        },
+        {
+          "text": "really",
+          "start": 7.066,
+          "end": 7.408
+        },
+        {
+          "text": "about",
+          "start": 7.427,
+          "end": 7.738
+        },
+        {
+          "text": "space.",
+          "start": 7.757,
+          "end": 8.068
+        },
+        {
+          "text": "It's",
+          "start": 8.267,
+          "end": 8.548
+        },
+        {
+          "text": "about",
+          "start": 8.566,
+          "end": 8.878
+        },
+        {
+          "text": "you.",
+          "start": 8.896,
+          "end": 9.145
+        }
+      ]
+    },
+    {
+      "id": "truth",
+      "text": "Here's the truth: you've never left space. Not for a single second.",
+      "start": 9.426,
+      "end": 13.423,
+      "words": [
+        {
+          "text": "Here's",
+          "start": 9.426,
+          "end": 9.768
+        },
+        {
+          "text": "the",
+          "start": 9.787,
+          "end": 10.036
+        },
+        {
+          "text": "truth:",
+          "start": 10.054,
+          "end": 10.366
+        },
+        {
+          "text": "you've",
+          "start": 10.478,
+          "end": 10.82
+        },
+        {
+          "text": "never",
+          "start": 10.839,
+          "end": 11.15
+        },
+        {
+          "text": "left",
+          "start": 11.169,
+          "end": 11.449
+        },
+        {
+          "text": "space.",
+          "start": 11.468,
+          "end": 11.779
+        },
+        {
+          "text": "Not",
+          "start": 11.978,
+          "end": 12.227
+        },
+        {
+          "text": "for",
+          "start": 12.246,
+          "end": 12.495
+        },
+        {
+          "text": "a",
+          "start": 12.514,
+          "end": 12.701
+        },
+        {
+          "text": "single",
+          "start": 12.719,
+          "end": 13.062
+        },
+        {
+          "text": "second.",
+          "start": 13.08,
+          "end": 13.423
+        }
+      ]
+    },
+    {
+      "id": "distance",
+      "text": "It starts just a hundred kilometers up. If your car could drive straight up, you'd be there in about an hour.",
+      "start": 13.703,
+      "end": 20.296,
+      "words": [
+        {
+          "text": "It",
+          "start": 13.703,
+          "end": 13.921
+        },
+        {
+          "text": "starts",
+          "start": 13.94,
+          "end": 14.282
+        },
+        {
+          "text": "just",
+          "start": 14.301,
+          "end": 14.581
+        },
+        {
+          "text": "a",
+          "start": 14.6,
+          "end": 14.786
+        },
+        {
+          "text": "hundred",
+          "start": 14.805,
+          "end": 15.179
+        },
+        {
+          "text": "kilometers",
+          "start": 15.197,
+          "end": 15.664
+        },
+        {
+          "text": "up.",
+          "start": 15.683,
+          "end": 15.901
+        },
+        {
+          "text": "If",
+          "start": 16.1,
+          "end": 16.318
+        },
+        {
+          "text": "your",
+          "start": 16.337,
+          "end": 16.617
+        },
+        {
+          "text": "car",
+          "start": 16.635,
+          "end": 16.885
+        },
+        {
+          "text": "could",
+          "start": 16.903,
+          "end": 17.215
+        },
+        {
+          "text": "drive",
+          "start": 17.233,
+          "end": 17.545
+        },
+        {
+          "text": "straight",
+          "start": 17.563,
+          "end": 17.968
+        },
+        {
+          "text": "up,",
+          "start": 17.987,
+          "end": 18.204
+        },
+        {
+          "text": "you'd",
+          "start": 18.317,
+          "end": 18.628
+        },
+        {
+          "text": "be",
+          "start": 18.647,
+          "end": 18.864
+        },
+        {
+          "text": "there",
+          "start": 18.883,
+          "end": 19.194
+        },
+        {
+          "text": "in",
+          "start": 19.213,
+          "end": 19.431
+        },
+        {
+          "text": "about",
+          "start": 19.45,
+          "end": 19.761
+        },
+        {
+          "text": "an",
+          "start": 19.78,
+          "end": 19.998
+        },
+        {
+          "text": "hour.",
+          "start": 20.016,
+          "end": 20.296
+        }
+      ]
+    },
+    {
+      "id": "speed",
+      "text": "And right now, sitting perfectly still, you're racing around the Sun at over a hundred thousand kilometers an hour.",
+      "start": 20.577,
+      "end": 26.983,
+      "words": [
+        {
+          "text": "And",
+          "start": 20.577,
+          "end": 20.826
+        },
+        {
+          "text": "right",
+          "start": 20.844,
+          "end": 21.156
+        },
+        {
+          "text": "now,",
+          "start": 21.174,
+          "end": 21.423
+        },
+        {
+          "text": "sitting",
+          "start": 21.536,
+          "end": 21.909
+        },
+        {
+          "text": "perfectly",
+          "start": 21.928,
+          "end": 22.364
+        },
+        {
+          "text": "still,",
+          "start": 22.382,
+          "end": 22.694
+        },
+        {
+          "text": "you're",
+          "start": 22.806,
+          "end": 23.148
+        },
+        {
+          "text": "racing",
+          "start": 23.167,
+          "end": 23.509
+        },
+        {
+          "text": "around",
+          "start": 23.528,
+          "end": 23.87
+        },
+        {
+          "text": "the",
+          "start": 23.889,
+          "end": 24.138
+        },
+        {
+          "text": "Sun",
+          "start": 24.157,
+          "end": 24.406
+        },
+        {
+          "text": "at",
+          "start": 24.424,
+          "end": 24.642
+        },
+        {
+          "text": "over",
+          "start": 24.661,
+          "end": 24.941
+        },
+        {
+          "text": "a",
+          "start": 24.96,
+          "end": 25.147
+        },
+        {
+          "text": "hundred",
+          "start": 25.165,
+          "end": 25.539
+        },
+        {
+          "text": "thousand",
+          "start": 25.558,
+          "end": 25.962
+        },
+        {
+          "text": "kilometers",
+          "start": 25.981,
+          "end": 26.448
+        },
+        {
+          "text": "an",
+          "start": 26.467,
+          "end": 26.685
+        },
+        {
+          "text": "hour.",
+          "start": 26.703,
+          "end": 26.983
+        }
+      ]
+    },
+    {
+      "id": "stars",
+      "text": "The iron in your blood? Forged inside stars that exploded before Earth even existed.",
+      "start": 27.264,
+      "end": 32.014,
+      "words": [
+        {
+          "text": "The",
+          "start": 27.264,
+          "end": 27.513
+        },
+        {
+          "text": "iron",
+          "start": 27.531,
+          "end": 27.812
+        },
+        {
+          "text": "in",
+          "start": 27.83,
+          "end": 28.048
+        },
+        {
+          "text": "your",
+          "start": 28.067,
+          "end": 28.347
+        },
+        {
+          "text": "blood?",
+          "start": 28.366,
+          "end": 28.677
+        },
+        {
+          "text": "Forged",
+          "start": 28.876,
+          "end": 29.219
+        },
+        {
+          "text": "inside",
+          "start": 29.237,
+          "end": 29.58
+        },
+        {
+          "text": "stars",
+          "start": 29.598,
+          "end": 29.91
+        },
+        {
+          "text": "that",
+          "start": 29.928,
+          "end": 30.209
+        },
+        {
+          "text": "exploded",
+          "start": 30.227,
+          "end": 30.632
+        },
+        {
+          "text": "before",
+          "start": 30.651,
+          "end": 30.993
+        },
+        {
+          "text": "Earth",
+          "start": 31.012,
+          "end": 31.323
+        },
+        {
+          "text": "even",
+          "start": 31.342,
+          "end": 31.622
+        },
+        {
+          "text": "existed.",
+          "start": 31.641,
+          "end": 32.014
+        }
+      ]
+    },
+    {
+      "id": "question",
+      "text": "So why does it feel so far away?",
+      "start": 32.575,
+      "end": 34.698,
+      "words": [
+        {
+          "text": "So",
+          "start": 32.575,
+          "end": 32.793
+        },
+        {
+          "text": "why",
+          "start": 32.811,
+          "end": 33.06
+        },
+        {
+          "text": "does",
+          "start": 33.079,
+          "end": 33.359
+        },
+        {
+          "text": "it",
+          "start": 33.378,
+          "end": 33.596
+        },
+        {
+          "text": "feel",
+          "start": 33.614,
+          "end": 33.895
+        },
+        {
+          "text": "so",
+          "start": 33.913,
+          "end": 34.131
+        },
+        {
+          "text": "far",
+          "start": 34.15,
+          "end": 34.399
+        },
+        {
+          "text": "away?",
+          "start": 34.418,
+          "end": 34.698
+        }
+      ]
+    },
+    {
+      "id": "psych",
+      "text": "Psychologists call it psychological distance. The farther away something feels, the more abstract your brain makes it. Less real. Less yours.",
+      "start": 35.071,
+      "end": 42.96,
+      "words": [
+        {
+          "text": "Psychologists",
+          "start": 35.071,
+          "end": 35.632
+        },
+        {
+          "text": "call",
+          "start": 35.65,
+          "end": 35.931
+        },
+        {
+          "text": "it",
+          "start": 35.949,
+          "end": 36.167
+        },
+        {
+          "text": "psychological",
+          "start": 36.186,
+          "end": 36.746
+        },
+        {
+          "text": "distance.",
+          "start": 36.765,
+          "end": 37.17
+        },
+        {
+          "text": "The",
+          "start": 37.369,
+          "end": 37.618
+        },
+        {
+          "text": "farther",
+          "start": 37.636,
+          "end": 38.01
+        },
+        {
+          "text": "away",
+          "start": 38.029,
+          "end": 38.309
+        },
+        {
+          "text": "something",
+          "start": 38.328,
+          "end": 38.763
+        },
+        {
+          "text": "feels,",
+          "start": 38.782,
+          "end": 39.093
+        },
+        {
+          "text": "the",
+          "start": 39.205,
+          "end": 39.455
+        },
+        {
+          "text": "more",
+          "start": 39.473,
+          "end": 39.753
+        },
+        {
+          "text": "abstract",
+          "start": 39.772,
+          "end": 40.177
+        },
+        {
+          "text": "your",
+          "start": 40.195,
+          "end": 40.476
+        },
+        {
+          "text": "brain",
+          "start": 40.494,
+          "end": 40.806
+        },
+        {
+          "text": "makes",
+          "start": 40.824,
+          "end": 41.136
+        },
+        {
+          "text": "it.",
+          "start": 41.154,
+          "end": 41.372
+        },
+        {
+          "text": "Less",
+          "start": 41.571,
+          "end": 41.852
+        },
+        {
+          "text": "real.",
+          "start": 41.87,
+          "end": 42.15
+        },
+        {
+          "text": "Less",
+          "start": 42.35,
+          "end": 42.63
+        },
+        {
+          "text": "yours.",
+          "start": 42.649,
+          "end": 42.96
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "text": "And we do it with everything. Our dreams. Our goals. The life we keep saying will start... someday.",
+      "start": 43.24,
+      "end": 49.497,
+      "words": [
+        {
+          "text": "And",
+          "start": 43.24,
+          "end": 43.489
+        },
+        {
+          "text": "we",
+          "start": 43.508,
+          "end": 43.726
+        },
+        {
+          "text": "do",
+          "start": 43.744,
+          "end": 43.962
+        },
+        {
+          "text": "it",
+          "start": 43.981,
+          "end": 44.199
+        },
+        {
+          "text": "with",
+          "start": 44.218,
+          "end": 44.498
+        },
+        {
+          "text": "everything.",
+          "start": 44.516,
+          "end": 44.983
+        },
+        {
+          "text": "Our",
+          "start": 45.183,
+          "end": 45.432
+        },
+        {
+          "text": "dreams.",
+          "start": 45.45,
+          "end": 45.793
+        },
+        {
+          "text": "Our",
+          "start": 45.992,
+          "end": 46.241
+        },
+        {
+          "text": "goals.",
+          "start": 46.26,
+          "end": 46.571
+        },
+        {
+          "text": "The",
+          "start": 46.77,
+          "end": 47.019
+        },
+        {
+          "text": "life",
+          "start": 47.038,
+          "end": 47.318
+        },
+        {
+          "text": "we",
+          "start": 47.337,
+          "end": 47.555
+        },
+        {
+          "text": "keep",
+          "start": 47.574,
+          "end": 47.854
+        },
+        {
+          "text": "saying",
+          "start": 47.872,
+          "end": 48.215
+        },
+        {
+          "text": "will",
+          "start": 48.233,
+          "end": 48.514
+        },
+        {
+          "text": "start...",
+          "start": 48.532,
+          "end": 48.844
+        },
+        {
+          "text": "someday.",
+          "start": 49.124,
+          "end": 49.497
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "text": "But you don't go to space. You're already in it.",
+      "start": 49.996,
+      "end": 53.053,
+      "words": [
+        {
+          "text": "But",
+          "start": 49.996,
+          "end": 50.245
+        },
+        {
+          "text": "you",
+          "start": 50.263,
+          "end": 50.512
+        },
+        {
+          "text": "don't",
+          "start": 50.531,
+          "end": 50.842
+        },
+        {
+          "text": "go",
+          "start": 50.861,
+          "end": 51.079
+        },
+        {
+          "text": "to",
+          "start": 51.098,
+          "end": 51.315
+        },
+        {
+          "text": "space.",
+          "start": 51.334,
+          "end": 51.645
+        },
+        {
+          "text": "You're",
+          "start": 51.845,
+          "end": 52.187
+        },
+        {
+          "text": "already",
+          "start": 52.206,
+          "end": 52.579
+        },
+        {
+          "text": "in",
+          "start": 52.598,
+          "end": 52.816
+        },
+        {
+          "text": "it.",
+          "start": 52.835,
+          "end": 53.053
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "text": "And the life you keep waiting for? You're already living it.",
+      "start": 53.426,
+      "end": 57.0,
+      "words": [
+        {
+          "text": "And",
+          "start": 53.426,
+          "end": 53.675
+        },
+        {
+          "text": "the",
+          "start": 53.694,
+          "end": 53.943
+        },
+        {
+          "text": "life",
+          "start": 53.962,
+          "end": 54.242
+        },
+        {
+          "text": "you",
+          "start": 54.26,
+          "end": 54.51
+        },
+        {
+          "text": "keep",
+          "start": 54.528,
+          "end": 54.808
+        },
+        {
+          "text": "waiting",
+          "start": 54.827,
+          "end": 55.201
+        },
+        {
+          "text": "for?",
+          "start": 55.219,
+          "end": 55.468
+        },
+        {
+          "text": "You're",
+          "start": 55.668,
+          "end": 56.01
+        },
+        {
+          "text": "already",
+          "start": 56.029,
+          "end": 56.402
+        },
+        {
+          "text": "living",
+          "start": 56.421,
+          "end": 56.763
+        },
+        {
+          "text": "it.",
+          "start": 56.782,
+          "end": 57.0
+        }
+      ]
+    }
+  ]
+}
