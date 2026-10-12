@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+**/.venv/
+audio/models/
+video/out/
+video/build/
+*.onnx
+*.bin
+__pycache__/
+.DS_Store
