@@ -1,39 +1,39 @@
 {
   "master": {
-    "integrated_LUFS": -14.09,
-    "true_peak_dBTP": -1.72,
-    "sample_peak_dBFS": -1.79,
-    "LRA_LU": 2.01,
+    "integrated_LUFS": -14.02,
+    "true_peak_dBTP": -1.39,
+    "sample_peak_dBFS": -1.43,
+    "LRA_LU": 2.0,
     "samples": 2880000,
     "duration_s": 60.0,
     "dc_offset": [
-      -0.000456,
-      -0.000469
+      -5.78e-06,
+      -4.81e-06
     ],
-    "correlation": 0.952,
+    "correlation": 0.951,
     "mono_minus_stereo_LU": -0.01,
-    "side_to_mid_dB": -16.12
+    "side_to_mid_dB": -15.96
   },
   "speech_regions": {
-    "vo_LUFS": -11.89,
-    "music_ducked_LUFS": -25.89,
+    "vo_LUFS": -11.81,
+    "music_ducked_LUFS": -25.81,
     "vo_minus_music_LU": 14.0,
-    "sfx_LUFS": -25.28
+    "sfx_LUFS": -24.8
   },
   "sections_master": [
     {
       "scene": "night-sky",
       "t0": 0.0,
       "t1": 9.102,
-      "max_short_term_LUFS": -13.6,
-      "median_short_term_LUFS": -14.4
+      "max_short_term_LUFS": -13.5,
+      "median_short_term_LUFS": -14.3
     },
     {
       "scene": "pull-back",
       "t0": 9.102,
       "t1": 13.18,
       "max_short_term_LUFS": -13.3,
-      "median_short_term_LUFS": -14.8
+      "median_short_term_LUFS": -14.7
     },
     {
       "scene": "karman",
@@ -53,136 +53,136 @@
       "scene": "star-stuff",
       "t0": 27.295,
       "t1": 33.108,
-      "max_short_term_LUFS": -12.7,
-      "median_short_term_LUFS": -13.8
+      "max_short_term_LUFS": -12.6,
+      "median_short_term_LUFS": -13.7
     },
     {
       "scene": "question",
       "t0": 33.108,
       "t1": 35.335,
-      "max_short_term_LUFS": -14.2,
+      "max_short_term_LUFS": -14.1,
       "median_short_term_LUFS": -15.3
     },
     {
       "scene": "psych",
       "t0": 35.335,
       "t1": 44.368,
-      "max_short_term_LUFS": -12.6,
-      "median_short_term_LUFS": -14.2
+      "max_short_term_LUFS": -12.5,
+      "median_short_term_LUFS": -14.1
     },
     {
       "scene": "someday",
       "t0": 44.368,
       "t1": 50.788,
-      "max_short_term_LUFS": -13.5,
-      "median_short_term_LUFS": -14.5
+      "max_short_term_LUFS": -13.4,
+      "median_short_term_LUFS": -14.3
     },
     {
       "scene": "already",
       "t0": 50.788,
       "t1": 60.0,
       "max_short_term_LUFS": -13.2,
-      "median_short_term_LUFS": -15.2
+      "median_short_term_LUFS": -15.1
     }
   ],
   "sections_music_ducked": [
     {
       "scene": "night-sky",
       "max_short_term_LUFS": -24.6,
-      "median_short_term_LUFS": -25.1
+      "median_short_term_LUFS": -25.2
     },
     {
       "scene": "pull-back",
-      "max_short_term_LUFS": -24.3,
+      "max_short_term_LUFS": -24.4,
       "median_short_term_LUFS": -25.5
     },
     {
       "scene": "karman",
       "max_short_term_LUFS": -25.0,
-      "median_short_term_LUFS": -25.9
+      "median_short_term_LUFS": -26.1
     },
     {
       "scene": "orbit",
-      "max_short_term_LUFS": -23.2,
-      "median_short_term_LUFS": -24.3
+      "max_short_term_LUFS": -23.4,
+      "median_short_term_LUFS": -24.5
     },
     {
       "scene": "star-stuff",
-      "max_short_term_LUFS": -22.9,
-      "median_short_term_LUFS": -24.9
+      "max_short_term_LUFS": -22.8,
+      "median_short_term_LUFS": -24.6
     },
     {
       "scene": "question",
-      "max_short_term_LUFS": -36.9,
-      "median_short_term_LUFS": -39.0
+      "max_short_term_LUFS": -36.5,
+      "median_short_term_LUFS": -38.6
     },
     {
       "scene": "psych",
-      "max_short_term_LUFS": -29.6,
-      "median_short_term_LUFS": -32.2
+      "max_short_term_LUFS": -27.3,
+      "median_short_term_LUFS": -29.6
     },
     {
       "scene": "someday",
-      "max_short_term_LUFS": -27.3,
-      "median_short_term_LUFS": -28.4
+      "max_short_term_LUFS": -25.4,
+      "median_short_term_LUFS": -26.3
     },
     {
       "scene": "already",
-      "max_short_term_LUFS": -19.4,
-      "median_short_term_LUFS": -22.7
+      "max_short_term_LUFS": -19.3,
+      "median_short_term_LUFS": -22.9
     }
   ],
   "word_masking_1_4kHz": {
-    "min_dB": 2.7,
-    "median_dB": 17.5,
+    "min_dB": 6.0,
+    "median_dB": 19.8,
     "worst": [
       {
         "beat": "truth",
         "word": "you've",
         "t": 10.29,
-        "dB": 2.7
+        "dB": 6.0
       },
       {
         "beat": "speed",
         "word": "the",
         "t": 24.2,
-        "dB": 2.9
+        "dB": 6.7
       },
       {
         "beat": "speed",
         "word": "an",
         "t": 26.65,
-        "dB": 3.2
+        "dB": 6.7
       },
       {
         "beat": "stars",
         "word": "even",
         "t": 31.84,
-        "dB": 4.5
+        "dB": 7.7
       },
       {
         "beat": "stars",
         "word": "existed.",
         "t": 32.13,
-        "dB": 5.8
-      },
-      {
-        "beat": "final",
-        "word": "you",
-        "t": 54.17,
-        "dB": 6.6
+        "dB": 9.4
       },
       {
         "beat": "distance",
         "word": "you'd",
         "t": 18.93,
-        "dB": 6.7
+        "dB": 9.8
       },
       {
         "beat": "stars",
         "word": "exploded",
         "t": 30.61,
-        "dB": 6.8
+        "dB": 10.1
+      },
+      {
+        "beat": "final",
+        "word": "you",
+        "t": 54.17,
+        "dB": 10.2
       }
     ]
   },
@@ -192,12 +192,12 @@
       0.0
     ],
     "last_sample": [
-      -1e-05,
-      -1.3e-05
+      -1.4e-05,
+      -1.6e-05
     ],
-    "jump": 1.29e-05,
-    "median_step": 0.00683,
-    "p99.9_step": 0.324
+    "jump": 1.61e-05,
+    "median_step": 0.00659,
+    "p99.9_step": 0.326
   },
   "clicks_music": [
     0.0
@@ -213,17 +213,18 @@
     15.712,
     15.827,
     15.943,
-    16.059,
+    16.058,
     16.174,
     16.289,
     16.405,
-    24.491,
-    24.583,
+    24.394,
+    24.49,
+    24.582,
     24.67,
     24.754,
     24.834,
     24.911,
-    24.986,
+    24.985,
     25.057,
     25.126,
     25.192,
@@ -235,8 +236,6 @@
     25.55,
     25.603,
     25.656,
-    30.815,
-    30.94,
     31.554,
     31.631,
     31.869
@@ -247,8 +246,14 @@
     "duck_release_ms": 350.0,
     "duck_lookahead_ms": 25.0,
     "sfx_duck_db": 2.0,
-    "music_bus_gain_db": -0.12,
-    "master_gain_db": -0.2,
+    "band_hz": [
+      900.0,
+      4500.0
+    ],
+    "music_band_extra_duck_db": 4.0,
+    "sfx_band_extra_duck_db": 5.0,
+    "music_bus_gain_db": 0.36,
+    "master_gain_db": -0.12,
     "limiter_ceiling_dBTP": -1.3
   }
 }

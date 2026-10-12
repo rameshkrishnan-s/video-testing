@@ -5,7 +5,7 @@ import { ASSETS } from "../theme";
 export type GrainProps = {
   /** Added to useCurrentFrame() so a scene preview matches Main (SceneHarness passes scene.from). */
   frameOffset?: number;
-  /** Grain strength (layer opacity). Default 0.11. */
+  /** Grain strength (layer opacity). Default 0.07. */
   opacity?: number;
   /** Change the grain pattern every N frames (default 1 = every frame, like film). */
   every?: number;
@@ -17,7 +17,7 @@ export type GrainProps = {
  * tiled backgrounds cost 130-350 ms/frame in software compositing; this is ~free).
  * Also dithers dark gradients against banding. Deterministic per frame.
  */
-export const Grain: React.FC<GrainProps> = ({ frameOffset = 0, opacity = 0.11, every = 1 }) => {
+export const Grain: React.FC<GrainProps> = ({ frameOffset = 0, opacity = 0.07, every = 1 }) => {
   const f = Math.floor((useCurrentFrame() + frameOffset) / every);
   const plate = f % ASSETS.grainPlates.length;
   const ox = -Math.floor(random(`grain-x-${f}`) * 118);
