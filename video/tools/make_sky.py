@@ -399,11 +399,11 @@ def make_overlays() -> None:
     # Vignette: RGBA, colour (2,3,8), alpha = radial falloff + top/bottom edges
     w, h = 1080, 1920
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
-    nx = (xx - w * 0.5) / (w * 0.85 * 0.5 * 1.25)
-    ny = (yy - h * 0.46) / (h * 0.70 * 0.5 * 1.25)
+    nx = (xx - w * 0.5) / (w * 0.62)
+    ny = (yy - h * 0.47) / (h * 0.60)
     r = np.sqrt(nx * nx + ny * ny)
-    rad = np.clip((r - 0.55) / 0.45, 0, 1)
-    rad = rad * rad * (3 - 2 * rad) * 0.55
+    rad = np.clip((r - 0.62) / 0.62, 0, 1)
+    rad = rad * rad * (3 - 2 * rad) * 0.62
     t = yy / h
     edges = np.maximum(np.clip(1 - t / 0.12, 0, 1) ** 1.6 * 0.35, np.clip((t - 0.80) / 0.20, 0, 1) ** 1.6 * 0.32)
     a = 1 - (1 - rad) * (1 - edges)

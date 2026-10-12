@@ -108,7 +108,7 @@
       "start": 9.27,
       "anchor": 1.2,
       "duration": 1.2,
-      "gain_db": -21.0,
+      "gain_db": -24.0,
       "ref": "truth: 1.2 s ending on 'never'",
       "file": "sfx/truth_riser.wav"
     },
@@ -118,7 +118,7 @@
       "start": 10.35,
       "anchor": 0.12,
       "duration": 1.9,
-      "gain_db": -19.0,
+      "gain_db": -20.0,
       "ref": "truth:'never' (zoom-out)",
       "file": "sfx/never_whoosh.wav"
     },
@@ -168,7 +168,7 @@
       "start": 23.238,
       "anchor": 0.3,
       "duration": 1.7,
-      "gain_db": -19.0,
+      "gain_db": -22.0,
       "ref": "speed:'racing'",
       "file": "sfx/speed_racing_whoosh.wav"
     },
@@ -228,7 +228,7 @@
       "start": 30.648,
       "anchor": 0.0,
       "duration": 6.014,
-      "gain_db": -21.0,
+      "gain_db": -25.0,
       "ref": "stars:'exploded' (+40 ms)",
       "file": "sfx/stars_supernova_debris.wav"
     },
@@ -248,7 +248,7 @@
       "start": 37.657,
       "anchor": 0.0,
       "duration": 5.177,
-      "gain_db": -31.0,
+      "gain_db": -34.0,
       "ref": "psych:'distance.'",
       "file": "sfx/psych_glass_1.wav"
     },
@@ -258,7 +258,7 @@
       "start": 39.782,
       "anchor": 0.0,
       "duration": 5.655,
-      "gain_db": -33.0,
+      "gain_db": -35.5,
       "ref": "psych:'feels,'",
       "file": "sfx/psych_glass_2.wav"
     },
@@ -268,7 +268,7 @@
       "start": 42.498,
       "anchor": 0.0,
       "duration": 5.811,
-      "gain_db": -34.0,
+      "gain_db": -36.0,
       "ref": "psych:'Blurrier.'",
       "file": "sfx/psych_glass_3.wav"
     },
