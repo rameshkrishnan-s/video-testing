@@ -1,0 +1,15 @@
+speed=1.000 tail_mult=0.95 trims=none voEnd=56.518
+words: 162; monotonic & non-overlapping: True; all inside their beat clip: True
+shortest word 60 ms, longest 898 ms; words < 60 ms: none
+word texts reproduce each beat's script text exactly: True
+pauses >= 120 ms: 20; loudest activity inside any of them: -33.8 dB re speech (threshold for 'silent' = -34 dB; worst: life:'dreams.')
+pause lengths (s): there.=0.26, there.=0.26, space.=0.31, truth:=0.16, space.=0.36, space?=0.27, up.=0.45, up,=0.20, now,=0.23, still,=0.42, blood?=0.48, distance.=0.42, it.=0.40, Blurrier.=0.35, everything.=0.38, dreams.=0.24, goals.=0.24, start...=0.35, space.=0.24, for?=0.30
+independent check vs PocketSphinx forced alignment (ours - PS):
+  PS own bias vs acoustic edge at clip start/end (acoustic - PS): start +20 ms, end +0 ms (PS places edges early)
+  internal word boundaries : n=130 median +5 ms, IQR [-8, +13] ms, mean|dev from median| 14 ms, within +-50 ms of median: 98%
+  word starts after a pause: n=20 median +18 ms, IQR [+12, +21] ms, mean|dev from median| 27 ms, within +-50 ms of median: 90%
+  word ends before a pause : n=20 median -11 ms, IQR [-19, +38] ms, mean|dev from median| 28 ms, within +-50 ms of median: 75%
+  pause edges (beat, word | next word, end dev ms, start dev ms): echo:there.|Up +50/-40; echo:there.|Far +53/+13; loop:space.|It's -12/+18; truth:truth:|you've +35/+25; truth:space.|Not -15/+25; distance:space?|Just -18/+20; distance:up.|If +52/+17; distance:up,|you'd -3/+10; speed:now,|sitting -5/+10; speed:still,|you're -27/+20; stars:blood?|Forged -37/+20; psych:distance.|The -10/+413; psych:it.|Blurrier. +47/+33; psych:Blurrier.|Less -53/+18; life:everything.|Our -13/+12; life:dreams.|Our +5/+5; life:goals.|The +97/+18; life:start...|someday. -22/+37; payoff:space.|You're -25/+17; final:for?|You're -18/+17
+5-9 kHz share of total energy before polish: -16.3 dB
+limiter threshold -8.5 dBFS (99.99th-percentile peak) before peak-normalising
+final vo.wav: peak -3.00 dBFS, integrated -15.3 LUFS, 60.000 s @ 48 kHz

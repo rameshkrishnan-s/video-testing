@@ -1,0 +1,14 @@
+# audio/.venv:  python3 -m venv audio/.venv && audio/.venv/bin/pip install -r audio/requirements.txt
+# model files (not in git): audio/models/kokoro-v1.0.onnx and voices-v1.0.bin from
+#   https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/
+# (kokoro-v1.0-dur.onnx, the duration-exposing copy, is generated automatically on first run)
+kokoro-onnx==0.6.1
+onnx==1.23.2
+onnxruntime==1.31.0
+numpy==2.5.4
+scipy==1.18.1
+soundfile==0.14.0
+soxr==1.1.0
+pedalboard==0.9.26
+pyloudnorm==0.2.0
+pocketsphinx==5.1.1   # optional: independent forced-alignment check in validation

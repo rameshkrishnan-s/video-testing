@@ -1,0 +1,16 @@
+speed=1.000 tail_mult=0.95 trims=none
+voStart=0.080  voEnd=56.518
+
+beat        start     end
+hook        0.080   2.705   speed 1.000   Why do we always talk about space like it's somewhere else?
+echo        3.115   5.540   speed 1.000   Out there. Up there. Far away.
+loop        6.050   8.842   speed 1.000   The answer isn't really about space. It's about you.
+truth       9.352  12.970   speed 1.000   Here's the truth: you've never left space. Not for a single second.
+distance   13.430  20.378   speed 1.000   The so-called edge of space? Just a hundred kilometers up. If your car could drive straight up, you'd be there in about an hour.
+speed      20.788  27.085   speed 1.000   And right now, sitting perfectly still, you're racing around the Sun at over a hundred thousand kilometers an hour.
+stars      27.545  32.748   speed 1.000   The iron in your blood? Forged inside stars that exploded before Earth even existed.
+question   33.358  35.025   speed 1.000   So why does it feel so far away?
+psych      35.585  44.108   speed 1.000   Psychologists call it psychological distance. The farther away something feels, the more abstractly we think about it. Blurrier. Less yours.
+life       44.617  50.477   speed 1.000   And we do it with everything. Our dreams. Our goals. The life we keep saying will start... someday.
+payoff     51.038  53.248   speed 0.950   But you don't go to space. You're already in it.
+final      53.708  56.518   speed 0.950   And the life you keep waiting for? You're already living it.
