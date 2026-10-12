@@ -1,5 +1,7 @@
 import React from "react";
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
+import { Logo } from "./brand/Logo";
+import { Banner } from "./brand/Banner";
 import { Main, ScenePreview } from "./Main";
 import { EarthTest, EARTH_TEST_FRAMES } from "./dev/EarthTest";
 import { DesignDemo, DESIGN_DEMO_FRAMES } from "./dev/DesignDemo";
@@ -128,6 +130,10 @@ export const RemotionRoot: React.FC = () => {
           height={VIDEO.height}
           defaultProps={{}}
         />
+      </Folder>
+    <Folder name="Brand">
+        <Still id="Logo" component={Logo} width={800} height={800} />
+        <Still id="Banner" component={Banner} width={2560} height={1440} />
       </Folder>
     </>
   );
