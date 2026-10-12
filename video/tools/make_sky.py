@@ -5,7 +5,10 @@ Outputs
   public/img/sky_milkyway.jpg      2304x4096 deep-space background with a soft Milky Way band
   public/img/sky_milkyway_preview.jpg  576x1024 preview (for quick looks only)
   public/img/starfield_layer.png   2304x4096 transparent dense starfield (parallax layer)
-  public/img/grain_0..5.png        512x512 film-grain tiles (gray, mid = 128)
+  public/img/grain_0..5.png        512x512 film-grain tiles (gray, mid = 128; for blend modes)
+  public/img/grain_rgba_0..5.png   512x512 grain for NORMAL blending (white/black, alpha=|noise|)
+  public/img/vignette.png          1080x1920 RGBA vignette (cheaper than CSS gradients)
+  public/img/grain_plate_0..2.png  1200x2040 LA grain plates (used by <Grain/>)
 
 Run (needs numpy, pillow, scipy -> tools/.venv):
   tools/.venv/bin/python tools/make_sky.py
@@ -390,14 +393,62 @@ def make_grain() -> None:
     print("  grain tiles written")
 
 
+def make_overlays() -> None:
+    """Pre-rendered overlays (cheaper to composite than CSS gradients / blend modes)."""
+    rng = np.random.default_rng(SEED + 303)
+    # Vignette: RGBA, colour (2,3,8), alpha = radial falloff + top/bottom edges
+    w, h = 1080, 1920
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    nx = (xx - w * 0.5) / (w * 0.85 * 0.5 * 1.25)
+    ny = (yy - h * 0.46) / (h * 0.70 * 0.5 * 1.25)
+    r = np.sqrt(nx * nx + ny * ny)
+    rad = np.clip((r - 0.55) / 0.45, 0, 1)
+    rad = rad * rad * (3 - 2 * rad) * 0.55
+    t = yy / h
+    edges = np.maximum(np.clip(1 - t / 0.12, 0, 1) ** 1.6 * 0.35, np.clip((t - 0.80) / 0.20, 0, 1) ** 1.6 * 0.32)
+    a = 1 - (1 - rad) * (1 - edges)
+    a = a + (rng.random(a.shape, dtype=np.float32) - 0.5) / 255.0 * 2  # dither
+    rgba = np.zeros((h, w, 4), np.uint8)
+    rgba[..., 0], rgba[..., 1], rgba[..., 2] = 2, 3, 8
+    rgba[..., 3] = np.clip(a * 255 + 0.5, 0, 255).astype(np.uint8)
+    Image.fromarray(rgba, "RGBA").save(os.path.join(OUT, "vignette.png"), optimize=True)
+    # Grain tiles for NORMAL blending: white/black with alpha = |noise|
+    S = 512
+    for i in range(6):
+        fine = ndimage.gaussian_filter(rng.standard_normal((S, S)).astype(np.float32), 0.55, mode="wrap")
+        coarse = ndimage.gaussian_filter(rng.standard_normal((S, S)).astype(np.float32), 1.3, mode="wrap")
+        g = fine / fine.std() * 0.8 + coarse / coarse.std() * 0.35
+        g /= g.std()
+        out = np.zeros((S, S, 4), np.uint8)
+        pos = g > 0
+        out[..., :3] = np.where(pos[..., None], 255, 0)
+        out[..., 3] = np.clip(np.abs(g) * 0.33 * 255, 0, 255).astype(np.uint8)
+        Image.fromarray(out, "RGBA").save(os.path.join(OUT, f"grain_rgba_{i}.png"), optimize=True)
+    # Full-frame grain plates (LA: white/black + alpha), slightly larger than the frame so they
+    # can be shifted per frame with a cheap compositor-only transform.
+    GW, GH = 1200, 2040
+    for i in range(3):
+        fine = ndimage.gaussian_filter(rng.standard_normal((GH, GW)).astype(np.float32), 0.55)
+        coarse = ndimage.gaussian_filter(rng.standard_normal((GH, GW)).astype(np.float32), 1.3)
+        g = fine / fine.std() * 0.8 + coarse / coarse.std() * 0.35
+        g /= g.std()
+        la = np.zeros((GH, GW, 2), np.uint8)
+        la[..., 0] = np.where(g > 0, 255, 0)
+        la[..., 1] = np.clip(np.abs(g) * 0.33 * 255, 0, 255).astype(np.uint8)
+        Image.fromarray(la, "LA").save(os.path.join(OUT, f"grain_plate_{i}.png"), optimize=True)
+    print("  overlays written")
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     import sys
 
-    which = sys.argv[1:] or ["sky", "layer", "grain"]
+    which = sys.argv[1:] or ["sky", "layer", "grain", "overlays"]
     if "sky" in which:
         make_milky_way()
     if "layer" in which:
         make_starfield_layer()
     if "grain" in which:
         make_grain()
+    if "overlays" in which:
+        make_overlays()

@@ -31,7 +31,9 @@ import "../lib/fonts";
 
 export const EARTH_TEST_FRAMES = 360;
 
-export const EarthTest: React.FC = () => {
+export type EarthTestProps = { aa?: boolean; clouds?: boolean; atmo?: boolean; sky?: boolean };
+
+export const EarthTest: React.FC<EarthTestProps> = ({ aa = true, clouds = true, atmo = true, sky = true }) => {
   const frame = useCurrentFrame();
   const { width, height } = useVideoConfig();
   const section = Math.min(3, Math.floor(frame / 90));
@@ -100,14 +102,18 @@ export const EarthTest: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      <SkyBackground pan={skyPan} rotate={-12} brightness={0.9} />
-      <Starfield seed="earthtest" count={500} brightness={0.8} />
+      {sky ? <SkyBackground pan={skyPan} rotate={-12} brightness={0.9} /> : null}
+      {sky ? <Starfield seed="earthtest" count={500} brightness={0.8} /> : null}
       <Earth3D
         camera={camera}
         sunDirection={sun}
         facingLon={facingLon}
         facingLat={facingLat}
         cloudDrift={frame * 0.02}
+        antialias={aa}
+        cloudOpacity={clouds ? 1 : 0}
+        atmosphere={atmo ? 1 : 0}
+        halo={atmo ? 1 : 0}
         pins={pins}
       />
     </AbsoluteFill>

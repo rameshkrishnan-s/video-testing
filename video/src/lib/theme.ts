@@ -134,6 +134,11 @@ export const ASSETS = {
   skySize: { width: 2304, height: 4096 },
   starLayer: "img/starfield_layer.png", // 2304x4096 transparent
   grain: [0, 1, 2, 3, 4, 5].map((i) => `img/grain_${i}.png`),
+  /** Grain tiles for normal blending (used by <Grain/>). */
+  grainRgba: [0, 1, 2, 3, 4, 5].map((i) => `img/grain_rgba_${i}.png`),
+  vignette: "img/vignette.png",
+  /** Full-frame grain plates (used by <Grain/>). */
+  grainPlates: [0, 1, 2].map((i) => `img/grain_plate_${i}.png`),
   earthDay: "textures/earth_day_4096.jpg",
   earthNight: "textures/earth_night_4096.jpg",
   /** R = bump/elevation, G = roughness (land=1, ocean=0), B = clouds. */

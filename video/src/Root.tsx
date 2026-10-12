@@ -3,6 +3,7 @@ import { Composition, Folder } from "remotion";
 import { Main, ScenePreview } from "./Main";
 import { EarthTest, EARTH_TEST_FRAMES } from "./dev/EarthTest";
 import { DesignDemo, DESIGN_DEMO_FRAMES } from "./dev/DesignDemo";
+import { PerfTest } from "./dev/PerfTest";
 import { getScene } from "./lib/timeline";
 import { VIDEO } from "./lib/theme";
 import "./lib/fonts";
@@ -117,6 +118,15 @@ export const RemotionRoot: React.FC = () => {
           fps={VIDEO.fps}
           width={VIDEO.width}
           height={VIDEO.height}
+        />
+        <Composition
+          id="PerfTest"
+          component={PerfTest}
+          durationInFrames={60}
+          fps={VIDEO.fps}
+          width={VIDEO.width}
+          height={VIDEO.height}
+          defaultProps={{}}
         />
       </Folder>
     </>
